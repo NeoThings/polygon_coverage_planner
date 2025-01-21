@@ -579,11 +579,11 @@ PolygonWithHoles PolygonPlannerBase::convertMap2Polygon() {
         }
     }
 
-    double trans_x = img.rows + map_origin_x_*20;
-    double trans_y = map_origin_y_*20;
+    double trans_x = map_origin_x_*20;
+    double trans_y = img.cols + map_origin_y_*20;
     
     // trans from picture frame to ros grid map frame
-    CGAL::Aff_transformation_2<K> transform(1.0, 0.0, -trans_x, 0.0, -1.0, -trans_y, 20);
+    CGAL::Aff_transformation_2<K> transform(1.0, 0.0, trans_x, 0.0, -1.0, trans_y, 20);
 
     for (auto it = outer_polygon.begin(); it != outer_polygon.end(); it++) {
       *it = transform(*it);
