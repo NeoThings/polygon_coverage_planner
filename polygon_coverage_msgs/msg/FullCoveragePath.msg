@@ -1,0 +1,2 @@
+std_msgs/Header header
+polygon_coverage_msgs/CoveragePath[] full_coverage_path

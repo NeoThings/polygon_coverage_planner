@@ -1,0 +1,14 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/neo/demobot_polygon_coverage_ws/devel/lib/python3/dist-packages",
+    "/home/neo/demobot_ws/devel/lib/python3/dist-packages",
+    "/home/neo/cartographer_ws/install_isolated/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/neo/demobot_polygon_coverage_ws/devel/lib/python3/dist-packages",
+    "/home/neo/demobot_ws/devel/lib/python3/dist-packages",
+    "/home/neo/cartographer_ws/install_isolated/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/neo/demobot_polygon_coverage_ws/devel/include/**",
+        "/home/neo/demobot_ws/devel/include/**",
+        "/home/neo/cartographer_ws/install_isolated/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/amcl/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/base_local_planner/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/carrot_planner/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/clear_costmap_recovery/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/costmap_2d/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/demobot_core/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/dwa_local_planner/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/demobot_sensors/imu_driver/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/global_planner/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/map_server/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/move_base/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/move_slow_and_clear/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/nav_core/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/navfn/include/**",
+        "/home/neo/path_tracking_ws/src/path_tracking/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/demobot_tools/polygon_approximation/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/polygon_coverage_geometry/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/polygon_coverage_msgs/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/polygon_coverage_planners/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/polygon_coverage_ros/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/polygon_coverage_solvers/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/demobot_tools/robot_pose_ekf/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/rotate_recovery/include/**",
+        "/home/neo/demobot_polygon_coverage_ws/src/polygon_coverage_planning/rviz_polygon_tool/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/demobot_tools/tracking_pid/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/voxel_grid/include/**",
+        "/home/neo/demobot_ws/src/DemoBot/navigation/wall_follower/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
