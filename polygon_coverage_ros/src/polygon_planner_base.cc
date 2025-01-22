@@ -579,8 +579,8 @@ PolygonWithHoles PolygonPlannerBase::convertMap2Polygon() {
         }
     }
 
-    double trans_x = (map_origin_x_ + 0.025) / 0.05;
-    double trans_y = -(img.rows - 1) - (map_origin_y_ + 0.025) / 0.05;
+    double trans_x = map_origin_x_ / 0.05;
+    double trans_y = -(img.rows - 1) - map_origin_y_ / 0.05;
     
     // trans from picture frame to ros grid map frame
     CGAL::Aff_transformation_2<K> transform(1.0, 0.0, trans_x, 0.0, 1.0, trans_y, 20);
