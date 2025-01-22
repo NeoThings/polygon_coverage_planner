@@ -579,23 +579,36 @@ PolygonWithHoles PolygonPlannerBase::convertMap2Polygon() {
         }
     }
 
-    double trans_x = map_origin_x_*20;
-    double trans_y = img.cols + map_origin_y_*20;
+    double trans_x = (map_origin_x_ + 0.025) / 0.05;
+    double trans_y = -(img.rows - 1) - (map_origin_y_ + 0.025) / 0.05;
     
     // trans from picture frame to ros grid map frame
-    CGAL::Aff_transformation_2<K> transform(1.0, 0.0, trans_x, 0.0, -1.0, trans_y, 20);
-
+    CGAL::Aff_transformation_2<K> transform(1.0, 0.0, trans_x, 0.0, 1.0, trans_y, 20);
+    
+    Polygon_2 output_polygon;
     for (auto it = outer_polygon.begin(); it != outer_polygon.end(); it++) {
       *it = transform(*it);
+      double x = CGAL::to_double(it->x());
+      double y_inversed = -1.0 * CGAL::to_double(it->y());
+      Point_2 p(x, y_inversed);
+      output_polygon.push_back(p);
     }
 
+    Polygon_2 temp_polygon;
+    std::vector<Polygon_2> output_holes;
     for (auto it = holes.begin(); it != holes.end(); it++) {
+      temp_polygon.clear();
       for (auto sub_it = it->begin(); sub_it != it->end(); sub_it++) {
         *sub_it = transform(*sub_it);
+        double x = CGAL::to_double(sub_it->x());
+        double y_inversed = -1.0 * CGAL::to_double(sub_it->y());
+        Point_2 p(x, y_inversed);
+        temp_polygon.push_back(p);
       }
+      output_holes.push_back(temp_polygon);
     }
 
-    PolygonWithHoles pwh(outer_polygon, holes.begin(), holes.end());
+    PolygonWithHoles pwh(output_polygon, output_holes.begin(), output_holes.end());
 
     return pwh;
 }
